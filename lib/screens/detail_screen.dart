@@ -227,52 +227,56 @@ class _DetailScreen extends State<DetailScreen> {
                                 ),
                               ),
                               const SizedBox(height: 12),
-                              Row(
-                                children: [
-                                  InkWell(
-                                    onTap: _clickMini,
-                                    child: SizeCard(
-                                      Size(
-                                        id: 1,
-                                        name: 'Mini',
-                                        isActive: isMini,
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                physics: BouncingScrollPhysics(),
+                                child: Row(
+                                  children: [
+                                    InkWell(
+                                      onTap: _clickMini,
+                                      child: SizeCard(
+                                        Size(
+                                          id: 1,
+                                          name: 'Mini',
+                                          isActive: isMini,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(width: 12),
-                                  InkWell(
-                                    onTap: _clickSedang,
-                                    child: SizeCard(
-                                      Size(
-                                        id: 2,
-                                        name: 'Currently',
-                                        isActive: isSedang,
+                                    const SizedBox(width: 12),
+                                    InkWell(
+                                      onTap: _clickSedang,
+                                      child: SizeCard(
+                                        Size(
+                                          id: 2,
+                                          name: 'Currently',
+                                          isActive: isSedang,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(width: 12),
-                                  InkWell(
-                                    onTap: _clickBesar,
-                                    child: SizeCard(
-                                      Size(
-                                        id: 3,
-                                        name: 'Large',
-                                        isActive: isBesar,
+                                    const SizedBox(width: 12),
+                                    InkWell(
+                                      onTap: _clickBesar,
+                                      child: SizeCard(
+                                        Size(
+                                          id: 3,
+                                          name: 'Large',
+                                          isActive: isBesar,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(width: 12),
-                                  InkWell(
-                                    onTap: _clickSuperBesar,
-                                    child: SizeCard(
-                                      Size(
-                                        id: 4,
-                                        name: 'Super Large',
-                                        isActive: isSuperBesar,
+                                    const SizedBox(width: 12),
+                                    InkWell(
+                                      onTap: _clickSuperBesar,
+                                      child: SizeCard(
+                                        Size(
+                                          id: 4,
+                                          name: 'Super Large',
+                                          isActive: isSuperBesar,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                               const SizedBox(height: 18),
                               Text(

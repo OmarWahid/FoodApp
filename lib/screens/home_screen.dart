@@ -21,20 +21,6 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // GradientText(
-                  //   'Hello, Sir',
-                  //
-                  //   style: poppinsTextStyle.copyWith(
-                  //     fontSize: 24,
-                  //     fontWeight: FontWeight.w500,
-                  //    // color: kBlackColor,
-                  //   ), colors: [Colors.red,
-                  // Colors.green,
-                  // Colors.blue],
-                  // ),
-                  // SizedBox(
-                  //   height: 10,
-                  // ),
                   Center(
                     child: Container(
                       decoration: BoxDecoration(
@@ -92,16 +78,20 @@ class HomeScreen extends StatelessWidget {
                             'Purchases over 5 additional items, burger promotion 2 KM only apply radius delivery, each purchase gets 1 burger coupon, 10 burger coupons can be exchanged for 1 burger.',
                         isPromo: false),
                   ),
-                  MenuCard(
-                    menu: Menu(
-                        id: 1,
-                        image: 'assets/paket_burger2.png',
-                        name: 'Big Tasty® Chicken',
-                        price: 110,
-                        pricePromo: 95,
-                        note:
-                            'Purchases over 5 additional items, burger promotion 2 KM only apply radius delivery, each purchase gets 1 burger coupon, 10 burger coupons can be exchanged for 1 burger.',
-                        isPromo: true),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    physics: BouncingScrollPhysics(),
+                    child: MenuCard(
+                      menu: Menu(
+                          id: 1,
+                          image: 'assets/paket_burger2.png',
+                          name: 'Big Tasty® Chicken',
+                          price: 110,
+                          pricePromo: 95,
+                          note:
+                              'Purchases over 5 additional items, burger promotion 2 KM only apply radius delivery, each purchase gets 1 burger coupon, 10 burger coupons can be exchanged for 1 burger.',
+                          isPromo: true),
+                    ),
                   ),
                   MenuCard(
                     menu: Menu(
@@ -147,21 +137,26 @@ class HomeScreen extends StatelessWidget {
                             'Purchases over 5 additional items, burger promotion 2 KM only apply radius delivery, each purchase gets 1 burger coupon, 10 burger coupons can be exchanged for 1 burger.',
                         isPromo: false),
                   ),
-                  MenuCard(
-                    menu: Menu(
-                        id: 1,
-                        image: 'assets/Pie-700x474.png',
-                        name: 'Strawberry Custard',
-                        price: 40,
-                        pricePromo: 37,
-                        note:
-                            'Purchases over 5 additional items, burger promotion 2 KM only apply radius delivery, each purchase gets 1 burger coupon, 10 burger coupons can be exchanged for 1 burger.',
-                        isPromo: false),
+                  SingleChildScrollView(
+                    physics: BouncingScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    child: MenuCard(
+                      menu: Menu(
+                          id: 1,
+                          image: 'assets/Pie-700x474.png',
+                          name: 'Strawberry Custard',
+                          price: 40,
+                          pricePromo: 37,
+                          note:
+                              'Purchases over 5 additional items, burger promotion 2 KM only apply radius delivery, each purchase gets 1 burger coupon, 10 burger coupons can be exchanged for 1 burger.',
+                          isPromo: false),
+                    ),
                   ),
                   MenuCard(
                     menu: Menu(
                         id: 1,
-                        image: 'assets/t-mcdonalds-qpc-deluxe-burger_product-header-desktop.jpg',
+                        image:
+                            'assets/t-mcdonalds-qpc-deluxe-burger_product-header-desktop.jpg',
                         name: 'Quarter Pounder',
                         price: 250,
                         pricePromo: 199,
